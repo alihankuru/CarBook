@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3F0C4D30-2F3B-43A5-BE0E-6702FD2BFA3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBook.Domain", "Core\CarBook.Domain\CarBook.Domain.csproj", "{838BAD15-BA7C-4961-B9F3-FADA26B5338A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838BAD15-BA7C-4961-B9F3-FADA26B5338A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838BAD15-BA7C-4961-B9F3-FADA26B5338A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838BAD15-BA7C-4961-B9F3-FADA26B5338A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838BAD15-BA7C-4961-B9F3-FADA26B5338A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{838BAD15-BA7C-4961-B9F3-FADA26B5338A} = {3F0C4D30-2F3B-43A5-BE0E-6702FD2BFA3D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C28603FF-37F2-4542-8F16-026168390D0B}
+	EndGlobalSection
+EndGlobal
