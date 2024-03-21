@@ -18,6 +18,7 @@ namespace CarBook.Application.Features.CQRS.Handlers.BannerHandlers
             _repository = repository;
         }
 
+    
         public async Task<List<GetBannerQueryResult>> Handle()
         {
             var values = await _repository.GetAllAsync();
