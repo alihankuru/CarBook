@@ -1,5 +1,4 @@
-﻿using CarBook.Application.Features.Mediator.Results.FeatureResults;
-using CarBook.Application.Features.Mediator.Results.PricingResults;
+﻿using CarBook.Application.Features.Mediator.Results.PricingResults;
 using MediatR;
 using System;
 using System.Collections.Generic;
