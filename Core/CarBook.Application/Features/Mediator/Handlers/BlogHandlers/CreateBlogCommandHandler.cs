@@ -28,7 +28,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
                 CoverImageUrl = request.CoverImageUrl,
                 CreatedData = request.CreatedData,
                 CategoryID = request.CategoryID,
-
+                Description = request.Description,
             });
         }
     }

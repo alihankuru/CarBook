@@ -33,6 +33,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers
                 CategoryID = values.CategoryID,
                 CreatedData = values.CreatedData,   
                 Title = values.Title,
+                Description = values.Description,
                 
 
             };
