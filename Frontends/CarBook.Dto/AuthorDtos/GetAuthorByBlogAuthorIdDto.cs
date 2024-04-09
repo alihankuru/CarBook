@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.Mediator.Results.BlogResults
+namespace CarBook.Dto.AuthorDtos
 {
-    public class GetBlogByAuthorIdQueryResult
+    public class GetAuthorByBlogAuthorIdDto
     {
         public int BlogID { get; set; }
         public string AuthorName { get; set; }
         public string AuthorDescription { get; set; }
         public string AuthorImageUrl { get; set; }
         public int AuthorID { get; set; }
-       
-      
 
     }
 }
