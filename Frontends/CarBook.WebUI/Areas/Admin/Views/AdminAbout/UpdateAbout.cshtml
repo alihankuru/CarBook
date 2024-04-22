@@ -1,0 +1,56 @@
+﻿@model UpdateAboutDto
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Hakkımızda Güncelleme</h4>
+                        <p class="card-subtitle mb-4">Banner ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
+
+                        <form method="post">
+
+
+                            <input type="hidden" asp-for="aboutID" />
+                            <div class="form-group">
+                                <label for="exampleInputtitle">Başlık İsmi</label>
+                                <input type="text" class="form-control" id="exampleInputtitle" asp-for="title" placeholder="Başlık Girişi Yapınız">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputdescription">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputdescription" asp-for="description" placeholder="Açıklama Yapınız">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputimageUrl">Resim Url</label>
+                                <input type="text" class="form-control" id="exampleInputimageUrl" asp-for="imageUrl" placeholder="Resim Url Girişi Yapınız">
+                            </div>
+
+                          
+
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Hakkımızda Kaydet</button>
+                        </form>
+
+                    </div> <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+
+        </div>
+        <!-- end page title -->
+
+    </div> <!-- container-fluid -->
+</div>
+
