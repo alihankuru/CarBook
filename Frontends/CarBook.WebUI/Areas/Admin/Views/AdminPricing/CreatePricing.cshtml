@@ -1,0 +1,49 @@
+﻿@model CreatePricingDto
+@{
+    ViewData["Title"] = "CreatePricing";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>CreatePricing</h1>
+
+
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yeni Ödeme Girişi</h4>
+                        <p class="card-subtitle mb-4">Ödeme ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
+
+                        <form method="post">
+
+
+
+                            <div class="form-group">
+                                <label for="exampleInputName">Ödeme Türü</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Ödeme Girişi Yapınız">
+                            </div>
+
+              
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                        </form>
+
+                    </div> <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+
+        </div>
+        <!-- end page title -->
+
+    </div> <!-- container-fluid -->
+</div>
