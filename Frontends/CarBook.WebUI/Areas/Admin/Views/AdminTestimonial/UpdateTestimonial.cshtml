@@ -1,8 +1,9 @@
-﻿@model CreateAuthorDto
+﻿@model UpdateTestimonialDto
 @{
-    ViewData["Title"] = "CreateAuthor";
+    ViewData["Title"] = "UpdateTestimonial";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+
 
 
 <div class="page-content">
@@ -14,22 +15,28 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Yeni Hakkımızda Girişi</h4>
-                        <p class="card-subtitle mb-4">Lokasyon ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
+                        <h4 class="card-title">Yeni Referans Girişi</h4>
+                        <p class="card-subtitle mb-4">Referans ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
 
                         <form method="post">
 
 
-
+                            <input type="hidden" asp-for="TestimonialID" />
                             <div class="form-group">
                                 <label for="exampleInputName">İsim</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="İsim Girişi Yapınız">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputDescription">Açıklama</label>
-                                <input type="text" class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Açıklama Yapınız">
+                                <label for="exampleInputTitle">Ünvan</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="Ünvan Girişi Yapınız">
                             </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputComment">Yorumlar</label>
+                                <input type="text" class="form-control" id="exampleInputComment" asp-for="Comment" placeholder="Yorum Girişi Yapınız">
+                            </div>
+
 
                             <div class="form-group">
                                 <label for="exampleInputImageUrl">Resim Url</label>
@@ -39,7 +46,7 @@
 
 
 
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Yazar Kaydet</button>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
                         </form>
 
                     </div> <!-- end card-body-->
@@ -53,6 +60,7 @@
 
     </div> <!-- container-fluid -->
 </div>
+
 
 
 

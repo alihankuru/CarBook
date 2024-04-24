@@ -1,6 +1,7 @@
-﻿@model CreateAuthorDto
+﻿@model UpdateServiceDto
+
 @{
-    ViewData["Title"] = "CreateAuthor";
+    ViewData["Title"] = "UpdateService";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
@@ -14,16 +15,16 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h4 class="card-title">Yeni Hakkımızda Girişi</h4>
-                        <p class="card-subtitle mb-4">Lokasyon ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
+                        <h4 class="card-title">Yeni Hizmetler Girişi</h4>
+                        <p class="card-subtitle mb-4">Hizmetler ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
 
                         <form method="post">
 
-
+                            <input type="hidden" asp-for="ServiceID" />
 
                             <div class="form-group">
-                                <label for="exampleInputName">İsim</label>
-                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="İsim Girişi Yapınız">
+                                <label for="exampleInputTitle">İsim</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="İsim Girişi Yapınız">
                             </div>
 
                             <div class="form-group">
@@ -32,14 +33,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputImageUrl">Resim Url</label>
-                                <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Resim Url Girişi Yapınız">
+                                <label for="exampleInputIconUrl">Icon Url</label>
+                                <input type="text" class="form-control" id="exampleInputIconUrl" asp-for="IconUrl" placeholder="Resim Url Girişi Yapınız">
                             </div>
 
-
-
-
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Yazar Kaydet</button>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
                         </form>
 
                     </div> <!-- end card-body-->

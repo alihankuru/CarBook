@@ -1,0 +1,59 @@
+﻿@model UpdateSocialMediaDto
+@{
+    ViewData["Title"] = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <h4 class="card-title">Yeni Sosyal Medya Girişi</h4>
+                        <p class="card-subtitle mb-4">Sosyal Medya ile ilgili temel özellikleri eksiksiz doldurmanız önemlidir.</p>
+
+                        <form method="post">
+
+                            <input type="hidden" asp-for="SocailMediaID"/>
+
+                            <div class="form-group">
+                                <label for="exampleInputName">Sosyal Medya İsmi</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="İsim Girişi Yapınız">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputUrl">Sosyal Medya Url</label>
+                                <input type="text" class="form-control" id="exampleInputUrl" asp-for="Url" placeholder="Sosyal Medya Url Girişi Yapınız">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputIcon">Resim Icon</label>
+                                <input type="text" class="form-control" id="exampleInputIcon" asp-for="Icon" placeholder="Icon Url Girişi Yapınız">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                        </form>
+
+                    </div> <!-- end card-body-->
+                </div>
+                <!-- end card -->
+
+            </div>
+
+        </div>
+        <!-- end page title -->
+
+    </div> <!-- container-fluid -->
+</div>
+
+
+
+
+
+
