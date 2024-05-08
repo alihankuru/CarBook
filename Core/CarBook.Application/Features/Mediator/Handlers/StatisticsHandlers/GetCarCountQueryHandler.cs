@@ -1,7 +1,10 @@
 ﻿using CarBook.Application.Features.CQRS.Queries;
 using CarBook.Application.Features.Mediator.Queries.StatisticsQueries;
+using CarBook.Application.Features.Mediator.Results.FooterAddressResults;
 using CarBook.Application.Features.Mediator.Results.StatisticsResults;
 using CarBook.Application.Interfaces;
+using CarBook.Application.Interfaces.CarInterfaces;
+using CarBook.Application.Interfaces.StatisticsInterfaces;
 using CarBook.Domain.Entities;
 using MediatR;
 using System;
@@ -14,16 +17,20 @@ namespace CarBook.Application.Features.Mediator.Handlers.StatisticsHandlers
 {
     public class GetCarCountQueryHandler : IRequestHandler<GetCarCountQuery, GetCarCountQueryResult>
     {
-        private readonly IRepository<Car> _repository;
+        private readonly IStatisticsRepository _repository;
 
-        public GetCarCountQueryHandler(IRepository<Car> repository)
+        public GetCarCountQueryHandler(IStatisticsRepository repository)
         {
             _repository = repository;
         }
 
-        public Task<GetCarCountQueryResult> Handle(GetCarCountQuery request, CancellationToken cancellationToken)
+        public async Task<GetCarCountQueryResult> Handle(GetCarCountQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var value =  _repository.GetCarCount();
+            return new GetCarCountQueryResult
+            {
+                CarCount=value,
+            };
         }
     }
 }
