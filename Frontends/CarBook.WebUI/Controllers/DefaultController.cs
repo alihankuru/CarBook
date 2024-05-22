@@ -45,6 +45,7 @@ namespace CarBook.WebUI.Controllers
             TempData["locationID"] = locationID;
 
 
+
             return RedirectToAction("Index","RentACarList");
         }
 
