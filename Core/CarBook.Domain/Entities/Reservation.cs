@@ -27,6 +27,8 @@ namespace CarBook.Domain.Entities
         public int DriverLicenceYear { get; set; }
         public string? Description { get; set; }
 
+        public string Status { get; set; }
+
      
    
     }

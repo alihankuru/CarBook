@@ -35,6 +35,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.ReservationHandlers
                 Phone=request.Phone,
                 CarID=request.CarID,
                 Age=request.Age,
+                Status="Rezervasyon Alındı"
             });
         }
     }
