@@ -33,6 +33,9 @@ namespace CarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
 				DailyAmount = x.Amounts[0],
 				WeeklyAmount = x.Amounts[1],
 				MonthlyAmount = x.Amounts[2],
+				CoverImageUrl=x.CoverImageUrl
+		
+				
 
 
 			}).ToList();
