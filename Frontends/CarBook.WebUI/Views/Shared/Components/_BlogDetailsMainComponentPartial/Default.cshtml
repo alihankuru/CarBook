@@ -9,12 +9,14 @@
    
 
     <div class="pt-5 mt-5">
-        <h3 class="mb-5">Yorumlar</h3>
-        @await Component.InvokeAsync("_CommentListByBlogComponentPartial")
+        <h3 class="mb-5">@ViewBag.commentCount Yorumlar</h3>
+        @await Component.InvokeAsync("_CommentListByBlogComponentPartial", new { id = ViewBag.blogid })
         
         <!-- END comment-list -->
-        @await Component.InvokeAsync("_AddCommentComponentPartial")
+       @*  @await Component.InvokeAsync("_AddCommentComponentPartial") *@
         
+        @await Html.PartialAsync("~/Views/Blog/AddComment.cshtml")
+
     </div>
 
 </div>

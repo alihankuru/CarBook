@@ -39,7 +39,30 @@ namespace CarBook.WebUI.Controllers
             ViewBag.v1 = "Bloglar";
             ViewBag.v2 = "Blog Detayı ve Yorumlar";
             ViewBag.blogid=id;
+
+
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage2 = await client.GetAsync($"https://localhost:7290/api/Comments/GetCountCommentByBlog?id=" + id);
+            var jsonData2 = await responseMessage2.Content.ReadAsStringAsync();
+            ViewBag.commentCount = jsonData2;
+
+
             return View();
         }
+
+
+        [HttpGet]
+        public PartialViewResult AddComment()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public IActionResult AddComment(string p)
+        {
+
+            return View();
+        }
+
     }
 }
