@@ -40,9 +40,9 @@ namespace CarBook.Persistence.Repositories.CarPricingRepositories
 			using (var command = _context.Database.GetDbConnection().CreateCommand())
 			{
 				command.CommandText = @"
-            SELECT Model, CoverImageUrl, [3], [4], [1004]
+            SELECT Model,Name, CoverImageUrl, [3], [4], [1004]
             FROM (
-                SELECT Model, CoverImageUrl, PricingID, Amount
+                SELECT Model,Name, CoverImageUrl, PricingID, Amount
                 FROM CarPricings
                 INNER JOIN Cars ON Cars.CarID = CarPricings.CarId
                 INNER JOIN Brands ON Brands.BrandID = Cars.BrandID
@@ -59,6 +59,7 @@ namespace CarBook.Persistence.Repositories.CarPricingRepositories
 					{
 						CarPricingViewModel carPricingViewModel = new CarPricingViewModel()
 						{
+							Brand= reader["Name"].ToString(),
 							Model = reader["Model"].ToString(),
 							CoverImageUrl = reader["CoverImageUrl"].ToString(),
 							Amounts = new List<decimal>

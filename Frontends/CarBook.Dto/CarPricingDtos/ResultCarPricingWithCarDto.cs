@@ -14,5 +14,7 @@ namespace CarBook.Dto.CarPricingDtos
         public string Model { get; set; }
         public decimal Amount { get; set; }
         public string CoverImageUrl { get; set; }
+   
+
     }
 }

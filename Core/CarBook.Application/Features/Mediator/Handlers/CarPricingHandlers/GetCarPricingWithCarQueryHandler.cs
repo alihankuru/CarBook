@@ -3,6 +3,7 @@ using CarBook.Application.Features.Mediator.Queries.CarPricingQueries;
 using CarBook.Application.Features.Mediator.Results.CarPricingResults;
 using CarBook.Application.Features.Mediator.Results.LocationResults;
 using CarBook.Application.Interfaces.CarPricingInterfaces;
+using CarBook.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
             var values =  _repository.GetCarPricingWithCars();
             return values.Select(x => new GetCarPricingWithCarQueryResult
             {
+              
                 Amount = x.Amount,
                 Brand=x.Car.Brand.Name,
                 CarPricingId=x.CarPricingID,

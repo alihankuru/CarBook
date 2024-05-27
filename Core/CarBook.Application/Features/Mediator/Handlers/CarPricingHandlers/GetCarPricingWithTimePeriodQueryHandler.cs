@@ -28,7 +28,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
 
 			return values.Select(x => new GetCarPricingWithTimePeriodQueryResult
 			{
-				
+				Brand=x.Brand,
 				Model = x.Model,
 				DailyAmount = x.Amounts[0],
 				WeeklyAmount = x.Amounts[1],
