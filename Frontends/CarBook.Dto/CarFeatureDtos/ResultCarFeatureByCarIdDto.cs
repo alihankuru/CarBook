@@ -1,13 +1,12 @@
-﻿using CarBook.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.Mediator.Results.CarFeatureResults
+namespace CarBook.Dto.CarFeatureDtos
 {
-    public class GetCarFeatureByCarIdQueryResult
+    public class ResultCarFeatureByCarIdDto
     {
         public int CarFeatureID { get; set; }
         public int FeatureID { get; set; }
