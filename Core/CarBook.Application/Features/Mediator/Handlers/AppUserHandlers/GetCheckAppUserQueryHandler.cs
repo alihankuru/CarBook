@@ -32,7 +32,7 @@ namespace CarBook.Application.Features.Mediator.Handlers.AppUserHandlers
 
 			if(user != null)
 			{
-				values.IsExist = false;
+				values.IsExist = true;
 				values.Username = user.Username;
 				values.Role = (await _appRoleRepository.GetByFilterAsync(x => x.AppRoleId == user.AppRoleId)).AppRoleName;
 				values.Id = user.AppUserId;
