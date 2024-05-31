@@ -26,7 +26,11 @@ namespace CarBook.Application.Features.Mediator.Handlers.AppUserHandlers
 			{
 				Password = request.Password,
 				Username = request.UserName,
-				AppRoleId = (int)RoleType.Member
+				AppRoleId = (int)RoleType.Member,
+				Email=request.Email,
+				Name = request.Name,
+				Surname = request.UserName,
+				
 			});
 		}
 	}
