@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<html>
+<head>
+    <title>Index</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+</head>
+<body>
+
+    <div class="content">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <script type="text/javascript">
+                            $(document).ready(() => {
+                                var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7290/CarHub").build();
+
+                                $("#constatus").text(connection.state);
+
+                                connection.on("ReceiveCarCount", (value) => {
+                                    $("#carcount").text(value);
+                                });
+
+                                connection.start().then(() => {
+                                    $("#constatus").text(connection.state);
+                                    setInterval(() => {
+                                        connection.invoke("SendCarCount").catch((err) => {
+                                            console.error(err.toString());
+                                        });
+                                    }, 1000);
+                                }).catch((err) => {
+                                    console.error(err.toString());
+                                    $("#constatus").text("Error: " + err);
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 offset-2">
+            <div class="alert alert-info">Bağlantı Durumu: <strong id="constatus"></strong></div>
+        </div>
+        <div class="col-md-8 offset-2">
+            <div class="alert alert-info">Araba Sayısı: <strong id="carcount"></strong></div>
+        </div>
+    </div>
+
+</body>
+</html>
